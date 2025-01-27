@@ -18,7 +18,6 @@
         // Write your code here
         let amPm = s.charAt(8);
         let hour = "";
-        // console.log(s.slice(0,2));
 
         if (amPm === "A") {
           if (s.slice(0, 2) === "12") {
@@ -31,11 +30,8 @@
             hour = s.slice(0, 2);
           } else {
             hour = Number(s.slice(0, 2), 10) + 12;
-            console.log(hour);
           }
         }
-        // console.log(hour);
-
         return hour + s.slice(2, 8);
       }
 
