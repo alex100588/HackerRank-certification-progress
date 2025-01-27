@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+            There is a collection of input strings and a collection of query strings. For each query string, determine how many times it occurs in the list of input strings. Return an array of the results.
+        */
+
+      function matchingStrings(strings, queries) {
+        // Write your code here
+        let results = [];
+
+        queries.forEach((query) => {
+          let repeats = 0;
+
+          strings.forEach((str) => {
+            // console.log(str);
+            if (query === str) {
+              repeats++;
+            }
+          });
+          results.push(repeats);
+        });
+        
+        return results;
+      }
+
+      matchingStrings(["ab", "ab", "ab"], ["ab", "abc", "bc"]);
+    </script>
+  </body>
+</html>
